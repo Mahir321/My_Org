@@ -68,4 +68,5 @@ jobs:
         
       - name: New
         if: steps.Deploy.outputs.isSuccess
+        run:
           echo "Test Data Pass" 
