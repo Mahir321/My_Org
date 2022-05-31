@@ -1,4 +1,4 @@
-public class ABC {
+public class ABC1 {
 	 public Customer__c customer{get;set;}
     public Boolean hideButton{get;set;}
     public Boolean customerForm{get;set;}
