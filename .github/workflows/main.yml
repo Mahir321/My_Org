@@ -65,3 +65,7 @@ jobs:
         if: github.event_name == 'push'
         run:
           node_modules/sfdx-cli/bin/run force:source:deploy -p \force-app -u 'mahirkhan@ibirds.com' --json --loglevel fatal
+        
+      - name: New
+        if: steps.Deploy.outputs.isSuccess
+          echo "Test Data Pass" 
