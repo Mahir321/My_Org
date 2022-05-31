@@ -64,9 +64,9 @@ jobs:
         id: Deploy
         if: github.event_name == 'push'
         run:
-          node_modules/sfdx-cli/bin/run force:source:deploy -p \force-app -u 'mahirkhan@ibirds.com' --json --loglevel fatal
+          node_modules/sfdx-cli/bin/run force:source:deploy -c -p \force-app -u 'mahirkhan@ibirds.com' --json --loglevel fatal
         
       - name: New
-        if: steps.Deploy.outputs.isSuccess
-        run:
-          echo "Test Data Pass" 
+        run: |
+          echo "Test Print "
+          node_modules/sfdx-cli/bin/run force:source:deploy -p \force-app -u 'mahirkhan@ibirds.com' --json --loglevel fatal 
