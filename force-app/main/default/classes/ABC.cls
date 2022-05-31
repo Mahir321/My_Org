@@ -8,7 +8,7 @@ public class ABC {
     public String customerId{get;set;}
     public ABC(){
         system.debug(customerId); 
-        system.debug('New Test New Mahir Khan One First CHeck  FIrst '); 
+        system.debug('New Test New Mahir Khan One First CHeck  FIrst Mahir Khan '); 
         customer = new Customer__c(); 
         customersData = new List<Customer__c>();
         customerForm = true; 
