@@ -64,9 +64,4 @@ jobs:
         id: Deploy
         if: github.event_name == 'push'
         run:
-          node_modules/sfdx-cli/bin/run force:source:deploy -c -p \force-app -u 'mahirkhan@ibirds.com' --json --loglevel fatal
-          
-      - name: Do something with a passing build
-        if: steps.wait-for-build.outputs.conclusion == 'success'
-        run:
           node_modules/sfdx-cli/bin/run force:source:deploy -p \force-app -u 'mahirkhan@ibirds.com' --json --loglevel fatal
